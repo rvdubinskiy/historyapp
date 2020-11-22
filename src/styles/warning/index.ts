@@ -1,0 +1,1 @@
+export { Message, Container } from './Styled';
