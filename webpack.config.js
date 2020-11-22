@@ -12,7 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    mode: 'development', // TODO: Плохо, добавить зависимости от окружения
+    mode: 'production', // TODO: Плохо, добавить зависимости от окружения
 
     // Enable sourcemaps for debugging webpack's output.
     devtool: 'eval',
@@ -26,8 +26,8 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/',
+        path: path.resolve(__dirname, './build'),
+        // publicPath: '/',
         filename: '[name].[id].[hash].js',
         // chunkFilename: '[name].[id].[contenthash].js'
     },

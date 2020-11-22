@@ -1,4 +1,5 @@
 {
+    "homepage": "https://rvdubinskiy.github.io/historyapp",
     "name": "historyapp",
     "version": "1.0.0",
     "description": "",
@@ -6,7 +7,9 @@
     "scripts": {
         "dev-server": "npx webpack-dev-server",
         "dev": "webpack --mode development --watch",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "author": "",
     "license": "ISC",
@@ -37,6 +40,7 @@
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^5.0.1",
         "file-loader": "^6.2.0",
+        "gh-pages": "^3.1.0",
         "html-webpack-plugin": "^4.5.0",
         "mini-css-extract-plugin": "^1.3.1",
         "mobx-react": "^7.0.5",
