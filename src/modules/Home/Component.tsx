@@ -6,10 +6,8 @@ import { Button } from '../Button';
 import { TextField } from '../TextField';
 
 import { Wrapper } from '../BorderWrapper';
-import useGlobalStore from 'stores/GlobalStore';
 import { useObserver } from 'mobx-react';
-import UserStore from 'stores/UserStore';
-import { Paragraph } from 'modules/Questions/components/Body';
+import { Paragraph } from './Paragraph';
 
 const Header = styled.header`
     display: flex;
@@ -89,17 +87,10 @@ const Home: React.FC = () => {
             }}>
                 <Header>
                     <CustomWrapper>
-                        <Paragraph style={{
-                            fontSize: '1.6rem',
-                            width: 'auto'
-                        }}>
+                        <Paragraph>
                             {`Это история о невероятной смелости и отваге. История о том, как горстка советских бойцов остановила целую армаду немецких танков. Ровно 75 лет назад, 24 августа 1942 года, в разгар Сталинградской битвы, у хутора Малая Россошка состоялось сражение, которое до сих пор поражает проявленном в нем мужеством и отвагой.\n`}
                         </Paragraph>
-                        <strong style={{
-                            fontSize: '1.6rem',
-                            width: 'auto'
-                        }}
-                        >{'Мы предлагаем вам стать частью этой истории и посмотреть изнутри на то, как совершали подвиг 33 бойца 87-й стрелковой дивизии.'}</strong>
+                        <strong>{'Мы предлагаем вам стать частью этой истории и посмотреть изнутри на то, как совершали подвиг 33 бойца 87-й стрелковой дивизии.'}</strong>
                     </CustomWrapper>
                 </Header>
 
@@ -116,7 +107,7 @@ const Home: React.FC = () => {
                         disabled={name ? false : true}
                         onClick={() => {
                             name && sessionStorage.setItem("name", name);
-                            name && sessionStorage.setItem('points', '1');
+                            name && sessionStorage.setItem('points', '0');
                             name && (window.location.href = `question/${1}`);
                         }}
                     >
@@ -124,16 +115,6 @@ const Home: React.FC = () => {
                     </Button>
                 </Footer>
             </Wrapper>
-
-            {/* <Wrapper style={{
-                flexFlow: 'column nowrap',
-                backgroundColor: 'transparent',
-                position: "absolute",
-                zIndex: 10,
-                boxShadow: '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)'
-            }}>
-                
-            </Wrapper> */}
         </React.Fragment>
     ))
 };

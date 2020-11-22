@@ -93,7 +93,7 @@ export const Question: React.FC = () => {
                                 disabled={answer ? false : true}
                                 style={{marginLeft: '16px'}} 
                                 onClick={() => {
-                                    sessionStorage.setItem('points', (+id + 1).toString());
+                                    sessionStorage.setItem('points', id);
                                     answer && sessionStorage.setItem(chunk['page-number'], answer);
                                     if (chunk['page-number'] === '8') {
                                         answer && (window.location.href = `/final/`)
