@@ -8,8 +8,8 @@ export default (): JSX.Element => {
     return useObserver(() => {
         return (
             <Switch>
-                <Route path="/home" component={ProtectedComponent} />
-                <Route path="/" component={ProtectedComponent}/>
+                <Route path="/historyapp/home" component={ProtectedComponent} />
+                <Route path="/historyapp" component={ProtectedComponent}/>
             </Switch>
         );
     });
