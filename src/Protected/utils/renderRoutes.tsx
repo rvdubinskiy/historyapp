@@ -16,27 +16,27 @@ import { useObserver } from 'mobx-react';
 export const renderRoutes = () => useObserver(() => (
 
     <Switch>
-        <Route path="/historyapp/home" component={() => (
+        <Route path="/home" component={() => (
             <ErrorBoundary>
                 <Home/>
             </ErrorBoundary>
         )}/>
-        <Route path="/historyapp/question/:id" children={() => (
+        <Route path="/question/:id" children={() => (
             <ErrorBoundary>
                 <Question/>
             </ErrorBoundary>
         )}/>
-        <Route path="/historyapp/final" children={() => (
+        <Route path="/final" children={() => (
             <ErrorBoundary>
                 <Final/>
             </ErrorBoundary>
         )}/>
-        <Route path="/historyapp/fullstory" children={() => (
+        <Route path="/fullstory" children={() => (
             <ErrorBoundary>
                 <FullStory/>
             </ErrorBoundary>
         )}/>
-        <Redirect from="/historyapp" to="/historyapp/home"/>
+        <Redirect from="" to="/home"/>
         <Route render={() => <NotFound />} />
     </Switch>
 ));

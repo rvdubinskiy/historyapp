@@ -28,7 +28,7 @@ export const Final: React.FC = (): JSX.Element => {
                 <Header style={{
                     marginBottom: '16px'
                 }}>
-                    <Button onClick={() => window.location.href = '/historyapp/fullstory'}>
+                    <Button onClick={() => window.location.href = '/fullstory'}>
                         {'Посмотреть свою историю'}
                     </Button>
                 </Header>

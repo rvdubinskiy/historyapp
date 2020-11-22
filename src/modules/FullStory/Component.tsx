@@ -27,7 +27,7 @@ export const FullStory: React.FC = (): JSX.Element => {
             }}>
                 <Header>
                     <Button onClick={() => {
-                        window.location.href = '/historyapp/home'
+                        window.location.href = '/home'
                     }}>
                         {'На главную'}
                     </Button>

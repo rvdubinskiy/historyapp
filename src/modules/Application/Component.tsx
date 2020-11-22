@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import { Router } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Router } from 'react-router-dom';
 
 import { ThemeProvider as MuiThemeProvider} from '@material-ui/core/styles';
 // import { overridedMuiTheme } from '@huntbox-design/uing/Themes';
@@ -18,9 +18,11 @@ const Routes = (): JSX.Element => {
         <React.Fragment>
             <MuiThemeProvider theme={mainTheme}>
                 <GlobalStyle />
-                <Router history={history}>
-                    <LayoutRoutes />
-                </Router>
+                <HashRouter basename={process.env.PUBLIC_URL}>
+                    <Router history={history}>
+                        <LayoutRoutes />   
+                    </Router>
+                </HashRouter>
             </MuiThemeProvider>
         </React.Fragment>
     );
