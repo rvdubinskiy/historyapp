@@ -102,7 +102,7 @@ export const Question: React.FC = () => {
                                         answer && (window.location.href = `/question/${+id + 1}`);
                                     }
                                 }}>
-                                {'Submit'}
+                                {'Отправить'}
                             </Button>
                         </HeaderItem>
                     </Header>
