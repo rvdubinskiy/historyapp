@@ -108,7 +108,7 @@ const Home: React.FC = () => {
                         onClick={() => {
                             name && sessionStorage.setItem("name", name);
                             name && sessionStorage.setItem('points', '0');
-                            name && (window.location.href = `question/${1}`);
+                            name && (window.location.href = `/historyapp/question/${1}`);
                         }}
                     >
                     {`Начать`}
